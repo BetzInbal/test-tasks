@@ -9,12 +9,13 @@ import Task from './types/task'
 function App() {
 
   const [tasks, setTasks] = useState<Task[]>([])
-  const [newTask, setNewTask] = useState<Task>()
+  const [refresh, setRefresh] = useState(false)
+
 
   return (
     <>
-    <Add setNewTask={setNewTask}/>
-    <Grid tasks={tasks}/>
+    <Add setRefresh={setRefresh}/>
+    <Grid tasks={tasks} setRefresh={setRefresh}/>
     </>
   )
 }
