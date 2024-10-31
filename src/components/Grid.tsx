@@ -10,7 +10,7 @@ interface Props{
 export default function Grid({tasks,setRefresh}:Props) {
   return (
     <div>
-        {tasks.map(t => <Card task={t} setRefresh={setRefresh} key={t.id}/>)}
+        {tasks.map(t => <Card task={t} setRefresh={setRefresh} key={t._id}/>)}
         
     </div>
   )

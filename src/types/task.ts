@@ -3,5 +3,5 @@ export default interface Task{
     status:string
     priority:string
     description:string
-    id?:string
+    _id?:string
 }
