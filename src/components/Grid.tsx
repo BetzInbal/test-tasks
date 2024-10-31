@@ -4,12 +4,13 @@ import Card from './Card'
 
 interface Props{
     tasks:Task[]
+    setRefresh:(ref:boolean)=>void
 }
 
-export default function Grid({tasks}:Props) {
+export default function Grid({tasks,setRefresh}:Props) {
   return (
     <div>
-        {tasks.map(t => <Card task={t} key={t.id}/>)}
+        {tasks.map(t => <Card task={t} setRefresh={setRefresh} key={t.id}/>)}
         
     </div>
   )
